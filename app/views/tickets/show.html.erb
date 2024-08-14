@@ -1,0 +1,13 @@
+<h1>Ticket: <%= @ticket.request_number %></h1>
+<p>
+  <strong>Request Type:</strong>
+  <%= @ticket.request_type %>
+</p>
+<p>
+  <strong>Excavator Info:</strong>
+  <%= @ticket.excavator.company_name %>
+</p>
+<!-- Add map here -->
+<div data-controller="map">
+  <div data-map-well-known-text="<%= @ticket.well_known_text %>"></div>
+</div>

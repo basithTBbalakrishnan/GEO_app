@@ -1,0 +1,11 @@
+<h1>Tickets</h1>
+<ul>
+<% if @tickets.present? %>
+  <% @tickets.each do |ticket| %>
+    <li><%= link_to ticket.request_number, ticket_path(ticket) %></li>
+  <% end %>
+  <% else %>
+    <h2>Data is not available</h2>
+  <%end%>
+</ul>
+
